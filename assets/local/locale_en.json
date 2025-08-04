@@ -1,0 +1,24 @@
+{
+  "home": "Home",
+  "benefits": "Benefits",
+  "details": "Details",
+  "tuba_network": "Tuba Network",
+  "how_can_we_help": "How can we help you today?",
+  "meds_refill": "Refill Medications",
+  "medical_consult": "Medical Consultation",
+  "view_all": "View All",
+  "active_orders": "Active Orders",
+  "order_status": "Order Status",
+  "approved": "Approved",
+  "provider_name": "provider name",
+  "member_name": "Member Name",
+  "date": "Date",
+  "orders": "Orders",
+  "help": "Help",
+  "more": "More",
+  "ends_at": "Ends at",
+  "member_id": "Member ID %s",
+  "provider_hospital": "Al Markaz Al Takhasusi Medical Center - Riyadh",
+  "Member_name": "Mohamed Ali Mahmoud"
+
+}
