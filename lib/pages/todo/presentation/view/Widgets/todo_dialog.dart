@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:animate_do/animate_do.dart';
@@ -13,20 +14,23 @@ class TodoDialog {
     final titleController = TextEditingController(text: todo?.title ?? '');
 
     Get.defaultDialog(
-      title: todo == null ? 'Add To-Do' : 'Edit To-Do',
+      title: todo == null ? 'Add Task' : 'Edit Task',
       titleStyle: GoogleFonts.aBeeZee(
         fontWeight: FontWeight.bold,
         color: Colors.teal,
+        fontSize: 30.sp
       ),
       content: SlideInUp(
         duration: const Duration(milliseconds: 300),
         child: Padding(
-          padding: const EdgeInsets.symmetric(horizontal: 16.0),
+          padding: const EdgeInsets.symmetric(horizontal: 16.0,vertical: 16.0),
           child: TextField(
             controller: titleController,
             decoration: InputDecoration(
               labelText: 'Title',
-              border: const OutlineInputBorder(),
+              border: OutlineInputBorder(
+                borderRadius: BorderRadius.circular(15.r),
+              ),
               filled: true,
               fillColor: Colors.grey[100],
             ),
@@ -34,7 +38,7 @@ class TodoDialog {
         ),
       ),
       backgroundColor: Colors.white,
-      radius: 12,
+      radius: 15,
       textCancel: 'Cancel',
       cancelTextColor: Colors.grey[600],
       textConfirm: todo == null ? 'Add' : 'Update',
