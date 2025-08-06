@@ -15,19 +15,19 @@ class TodoDialog {
 
     Get.defaultDialog(
       title: todo == null ? 'Add Task' : 'Edit Task',
-      titleStyle: GoogleFonts.aBeeZee(
+      titleStyle: GoogleFonts.alexandria(
         fontWeight: FontWeight.bold,
-        color: Colors.teal,
+        color: Colors.deepPurpleAccent,
         fontSize: 30.sp
       ),
       content: SlideInUp(
         duration: const Duration(milliseconds: 300),
         child: Padding(
-          padding: const EdgeInsets.symmetric(horizontal: 16.0,vertical: 16.0),
+          padding: const EdgeInsets.symmetric(horizontal: 16.0,vertical: 10.0),
           child: TextField(
             controller: titleController,
             decoration: InputDecoration(
-              labelText: 'Title',
+             // labelText: 'Title',
               border: OutlineInputBorder(
                 borderRadius: BorderRadius.circular(15.r),
               ),
@@ -79,18 +79,24 @@ class TodoDialog {
           }
         },
         style: ElevatedButton.styleFrom(
-          backgroundColor: Colors.teal,
+          backgroundColor: Colors.deepPurpleAccent,
           foregroundColor: Colors.white,
           shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(8)),
-          padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 10),
+          padding: const EdgeInsets.symmetric(horizontal: 20, vertical:8),
         ),
         child: Text(todo == null ? 'Add' : 'Update'),
       ),
-      cancel: TextButton(
+      cancel: ElevatedButton(
         onPressed: () => Get.back(),
+        style: ElevatedButton.styleFrom(
+          backgroundColor: Colors.red,
+          foregroundColor: Colors.white,
+          shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(8)),
+          padding: const EdgeInsets.symmetric(horizontal: 18, vertical:8),
+        ),
         child: Text(
           'Cancel',
-          style: GoogleFonts.aBeeZee(color: Colors.grey[600]),
+          style: GoogleFonts.alexandria(color: Colors.white),
         ),
       ),
     );

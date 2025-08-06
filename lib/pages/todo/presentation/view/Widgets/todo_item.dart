@@ -40,7 +40,7 @@ class TodoItem extends GetView<TodoController> {
             Expanded(
               child: Text(
                 todo.title,
-                style: GoogleFonts.aBeeZee(
+                style: GoogleFonts.alexandria(
                   fontSize: 16,
                   fontWeight: FontWeight.w500,
                 ),
@@ -52,10 +52,10 @@ class TodoItem extends GetView<TodoController> {
                 SlideInDown(
                   duration: const Duration(milliseconds: 400),
                   child: CircleAvatar(
-                    backgroundColor: Colors.teal,
-                    radius: 18,
+                    backgroundColor: Colors.deepPurpleAccent,
+                    radius: 15,
                     child: IconButton(
-                      icon: const Icon(Icons.edit, size: 18, color: Colors.white),
+                      icon: const Icon(Icons.edit, size: 12, color: Colors.white),
                       onPressed: () => TodoDialog.show(todo: todo),
                     ),
                   ),
@@ -65,9 +65,9 @@ class TodoItem extends GetView<TodoController> {
                   duration: const Duration(milliseconds: 200),
                   child: CircleAvatar(
                     backgroundColor: Colors.redAccent,
-                    radius: 18,
+                    radius: 15,
                     child: IconButton(
-                      icon: const Icon(Icons.delete, size: 18, color: Colors.white),
+                      icon: const Icon(Icons.delete, size: 12, color: Colors.white),
                       onPressed: () => controller.deleteTodo(todo.id!),
                     ),
                   ),

@@ -15,22 +15,20 @@ class TodoScreen extends GetView<TodoController> {
       appBar: AppBar(
         title: Text(
           'To-Do App',
-          style: GoogleFonts.aBeeZee(
+          style: GoogleFonts.alexandria(
             fontWeight: FontWeight.bold,
             color: Colors.white,
           ),
         ),
-        backgroundColor: Colors.teal,
-        elevation: 2,
+        backgroundColor: Colors.deepPurpleAccent,
+        elevation: 4,
+        shadowColor: Colors.blue[900],
       ),
       body: Container(
         decoration: const BoxDecoration(
           image: DecorationImage(
-            image: NetworkImage(
-              'https://images.unsplash.com/photo-1507525428034-b723cf961d3e?ixlib=rb-4.0.3&auto=format&fit=crop&w=1350&q=80',
-            ),
+            image: AssetImage("assets/images/backgroundd.png"),
             fit: BoxFit.cover,
-            colorFilter: ColorFilter.mode(Colors.black54, BlendMode.darken),
           ),
         ),
         child: Obx(
@@ -47,7 +45,7 @@ class TodoScreen extends GetView<TodoController> {
         duration: const Duration(milliseconds: 400),
         child: FloatingActionButton(
           onPressed: () => TodoDialog.show(),
-          backgroundColor: Colors.teal,
+          backgroundColor: Colors.deepPurpleAccent,
           child: const Icon(Icons.add, color: Colors.white),
         ),
       ),
