@@ -23,7 +23,7 @@ class TodoDialog {
       content: SlideInUp(
         duration: const Duration(milliseconds: 300),
         child: Padding(
-          padding: const EdgeInsets.symmetric(horizontal: 16.0,vertical: 10.0),
+          padding:  EdgeInsets.symmetric(horizontal: 16.0.h,vertical: 10.0.w),
           child: TextField(
             controller: titleController,
             decoration: InputDecoration(
@@ -38,7 +38,7 @@ class TodoDialog {
         ),
       ),
       backgroundColor: Colors.white,
-      radius: 15,
+      radius: 15.r,
       textCancel: 'Cancel',
       cancelTextColor: Colors.grey[600],
       textConfirm: todo == null ? 'Add' : 'Update',
@@ -63,7 +63,7 @@ class TodoDialog {
               snackPosition: SnackPosition.BOTTOM,
               duration: const Duration(seconds: 2),
               margin: const EdgeInsets.all(16),
-              borderRadius: 8,
+              borderRadius: 8.r,
             );
           } else {
             Get.snackbar(
@@ -92,7 +92,7 @@ class TodoDialog {
           backgroundColor: Colors.red,
           foregroundColor: Colors.white,
           shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(8)),
-          padding: const EdgeInsets.symmetric(horizontal: 18, vertical:8),
+          padding:  EdgeInsets.symmetric(horizontal: 18.h, vertical:8.w),
         ),
         child: Text(
           'Cancel',

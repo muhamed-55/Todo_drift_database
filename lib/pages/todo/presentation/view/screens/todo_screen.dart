@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:animate_do/animate_do.dart';
@@ -33,7 +34,7 @@ class TodoScreen extends GetView<TodoController> {
         ),
         child: Obx(
               () => ListView.builder(
-            padding: const EdgeInsets.all(16.0),
+            padding:  EdgeInsets.symmetric(horizontal: 16.0.h,vertical: 16.0.w),
             itemCount: controller.todos.length,
             itemBuilder: (context, index) {
               return TodoItem(todo: controller.todos[index], index: index);
